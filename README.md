@@ -22,7 +22,7 @@ Built using **MVVM architecture** and **Provider** for state management, the app
 To run the project locally:
 
 ```bash
-git clone https://github.com/your-username/supermarket_fe.git
+git clone https://github.com/pokaktechnologies/supermarket-customer-fe.git
 cd supermarket_fe
 flutter pub get
 flutter run
