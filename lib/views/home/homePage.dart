@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supermarket_fe/widgets/bottom_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -160,6 +161,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: const BottomBar(),
     );
   }
 }
