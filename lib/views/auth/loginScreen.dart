@@ -2,22 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:supermarket_fe/core/theme/app_assets.dart';
 import 'package:supermarket_fe/core/theme/app_colors.dart';
 import 'package:supermarket_fe/core/utils/navigations.dart';
-import 'package:supermarket_fe/views/auth/loginScreen.dart';
-import 'package:supermarket_fe/views/auth/otpScreen.dart';
+import 'package:supermarket_fe/views/auth/signup.dart';
+import 'package:supermarket_fe/views/home/homePage.dart';
 import 'package:supermarket_fe/widgets/custom_button.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
-  @override
-  State<Signup> createState() => _SignupState();
-}
-
-class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +25,7 @@ class _SignupState extends State<Signup> {
             const Padding(
               padding: EdgeInsets.only(left: 20, top: 15),
               child: Text(
-                "Create\nAccount",
+                "Welcome\nBack",
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
@@ -49,9 +44,6 @@ class _SignupState extends State<Signup> {
               ),
             ),
 
-            //  SizedBox(height: 20),
-
-            // Image
             Center(
               child: Image.asset(
                 AppAssets.authImg1,
@@ -60,8 +52,6 @@ class _SignupState extends State<Signup> {
                 fit: BoxFit.fill,
               ),
             ),
-
-            // const SizedBox(height: 20),
 
             // Form Box
             Container(
@@ -75,37 +65,10 @@ class _SignupState extends State<Signup> {
               ),
               child: Column(
                 children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: "Enter your Name",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide.none,
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: const BorderSide(
-                          color: AppColors.primaryColor,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: const BorderSide(
-                          color: AppColors.primaryColor,
-                          width: 1.5,
-                        ),
-                      ),
-                      filled: true,
-                      fillColor: AppColors.white,
-                      contentPadding:
-                          const EdgeInsets.symmetric(horizontal: 20),
-                    ),
-                    keyboardType: TextInputType.phone,
-                  ),
                   const SizedBox(height: 15),
                   TextField(
                     decoration: InputDecoration(
-                      hintText: "Enter your number",
+                      hintText: "Enter your Number",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: BorderSide.none,
@@ -132,24 +95,24 @@ class _SignupState extends State<Signup> {
                   ),
                   const SizedBox(height: 20),
                   CustomButton(
-                    text: "SignUp",
+                    text: "Login",
                     onPressed: () {
-                      pushNavigation(context, const OtpScreen());
+                      pushAndRemoveUntilFun(context, const HomePage());
                     },
                   ),
                   const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Already have an account?"),
+                      const Text("Don't have an account?"),
                       GestureDetector(
                         onTap: () {
-                          pushNavigation(context, const LoginScreen());
+                          pushNavigation(context, const Signup());
                         },
                         child: const Text(
-                          " Login",
+                          " Sign",
                           style: TextStyle(
-                            color: Colors.green,
+                            color: AppColors.primaryColor,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

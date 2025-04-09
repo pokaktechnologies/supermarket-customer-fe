@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:supermarket_fe/core/theme/app_colors.dart';
-import 'package:supermarket_fe/core/utils/navigations.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
-  const CustomButton({super.key, required this.text});
+  final VoidCallback onPressed;
+  const CustomButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // pushNavigation(context, );
+        onPressed();
       },
       child: Container(
         height: 45,
