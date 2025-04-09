@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supermarket_fe/views/auth/signup.dart';
-import 'package:supermarket_fe/views/home/homePage.dart';
+import 'package:supermarket_fe/views/home/homeMainScreen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

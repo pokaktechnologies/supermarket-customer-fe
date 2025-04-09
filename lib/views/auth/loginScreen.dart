@@ -3,6 +3,7 @@ import 'package:supermarket_fe/core/theme/app_assets.dart';
 import 'package:supermarket_fe/core/theme/app_colors.dart';
 import 'package:supermarket_fe/core/utils/navigations.dart';
 import 'package:supermarket_fe/views/auth/signup.dart';
+import 'package:supermarket_fe/views/home/homeMainScreen.dart';
 import 'package:supermarket_fe/views/home/homePage.dart';
 import 'package:supermarket_fe/widgets/custom_button.dart';
 
@@ -97,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                   CustomButton(
                     text: "Login",
                     onPressed: () {
-                      pushAndRemoveUntilFun(context, const HomePage());
+                      pushAndRemoveUntilFun(context, const MainScreen());
                     },
                   ),
                   const SizedBox(height: 10),

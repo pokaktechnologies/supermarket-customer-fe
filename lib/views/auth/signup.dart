@@ -61,9 +61,6 @@ class _SignupState extends State<Signup> {
               ),
             ),
 
-            // const SizedBox(height: 20),
-
-            // Form Box
             Container(
               height: 300,
               width: double.infinity,
