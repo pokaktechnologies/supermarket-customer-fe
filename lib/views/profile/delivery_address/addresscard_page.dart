@@ -16,6 +16,7 @@ class AddressCard extends StatelessWidget {
     }
 
     return Card(
+      color: AppColors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.all(12),
