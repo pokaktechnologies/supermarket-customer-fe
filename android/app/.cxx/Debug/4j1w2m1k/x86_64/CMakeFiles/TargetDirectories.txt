@@ -1,0 +1,2 @@
+E:/project/pokakcomapany/superMarket/supermarket-customer-fe/android/app/.cxx/Debug/4j1w2m1k/x86_64/CMakeFiles/edit_cache.dir
+E:/project/pokakcomapany/superMarket/supermarket-customer-fe/android/app/.cxx/Debug/4j1w2m1k/x86_64/CMakeFiles/rebuild_cache.dir

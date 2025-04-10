@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:supermarket_fe/core/utils/navigations.dart';
+import 'package:supermarket_fe/views/profile/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,11 +17,11 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-            const Row(
+            Row(
               children: [
-                Icon(Icons.location_on_outlined, color: Colors.white),
-                SizedBox(width: 8),
-                Column(
+                const Icon(Icons.location_on_outlined, color: Colors.white),
+                const SizedBox(width: 8),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -36,12 +38,17 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  radius: 16,
-                  child: Icon(Icons.person, color: Colors.grey),
-                ),
+                const Spacer(),
+                GestureDetector(
+                  onTap: () {
+                    pushNavigation(context, const ProfilePage());
+                  },
+                  child: const CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 16,
+                    child: Icon(Icons.person, color: Colors.grey),
+                  ),
+                )
               ],
             ),
             const SizedBox(height: 12),

@@ -6,4 +6,7 @@ class AppAssets {
   static const String offerIcon = 'assets/home_icons/offers_icon.png';
   static const String authImg1 = 'assets/images/auth_img1.png';
   static const String logo = 'assets/images/logo.png';
+  // appbar
+  static const String arrowbackIcon = 'assets/arrow_back_icon.png';
+  static const String greenarrowbackIcon = 'assets/green_back_arrow.png';
 }
